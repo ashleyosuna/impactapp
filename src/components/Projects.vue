@@ -1,14 +1,7 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const display = ref('consignment-software')
-const myButton = ref(null)
-
-onMounted(() => {
-  if (myButton.value) {
-    myButton.value.focus()
-  }
-})
 </script>
 
 <template>
@@ -17,7 +10,6 @@ onMounted(() => {
     <div class="tabs">
       <button
         @click="display = 'consignment-software'"
-        ref="myButton"
         :class="{ 'bg-white': display === 'consignment-software' }"
       >
         Consignment Software
@@ -113,13 +105,17 @@ onMounted(() => {
           </div>
         </div>
         <div>
-          <div class="image-container left pb-[10px]">
+          <div class="image-container left pb-[15px]">
+            <p class="text-center font-semibold">Customer View</p>
             <video muted autoplay class="border border-[#eaebed] rounded-md p-2">
               <source src="/catalog.mp4" controls type="video/mp4" />
             </video>
           </div>
-          <div class="image-container right">
-            <img src="/admin-page.png" class="border border-[#eaebed] rounded-md p-2" />
+          <div class="image-container right pb-[10px]">
+            <p class="text-center font-semibold">Admin View</p>
+            <video muted autoplay class="border border-[#eaebed] rounded-md p-2">
+              <source src="/admin-page.mp4" controls type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
@@ -173,10 +169,6 @@ onMounted(() => {
     color 0.3s,
     background-color 0.3s;
 }
-
-/* .tabs button:focus {
-  background-color: white;
-} */
 
 .project-container {
   display: flex;
