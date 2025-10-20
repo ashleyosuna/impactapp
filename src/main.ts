@@ -10,6 +10,7 @@ import {
   faLightbulb,
   faLink,
   faFolderOpen,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faArrowDown)
@@ -17,6 +18,7 @@ library.add(faCheck)
 library.add(faLightbulb)
 library.add(faLink)
 library.add(faFolderOpen)
+library.add(faEnvelope)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)

@@ -19,6 +19,7 @@ p {
 
 .section {
   padding-inline: calc(var(--spacing) * 12);
+  margin-bottom: 20px;
 }
 
 .section h1 {

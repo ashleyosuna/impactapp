@@ -7,11 +7,10 @@
       <p class="italic">for impact.com</p>
     </div>
     <div class="text-center">
-      <span>Home</span>
-      <span>About</span>
-      <span>Projects</span>
-      <span>Skills</span>
-      <span>Contact</span>
+      <span @click="scroll('about-me')">About</span>
+      <span @click="scroll('projects')">Projects</span>
+      <span @click="scroll('skills')">Skills</span>
+      <span @click="scroll('contact')">Contact</span>
     </div>
   </div>
 </template>
@@ -31,3 +30,14 @@ span:hover {
   color: #298dda;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    scroll(id) {
+      const element = document.getElementById(id)
+      element.scrollIntoView({ behavior: 'smooth' })
+    },
+  },
+}
+</script>

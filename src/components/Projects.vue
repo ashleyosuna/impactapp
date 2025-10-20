@@ -12,12 +12,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="section">
+  <div class="section" id="projects">
     <h1 class="">Selected Projects</h1>
     <div class="tabs">
-      <button @click="display = 'consignment-software'" ref="myButton">Consignment Software</button>
-      <button @click="display = 'online-catalog'">Online Catalog</button>
-      <button @click="display = 'product-page'">Product Page</button>
+      <button
+        @click="display = 'consignment-software'"
+        ref="myButton"
+        :class="{ 'bg-white': display === 'consignment-software' }"
+      >
+        Consignment Software
+      </button>
+      <button
+        @click="display = 'online-catalog'"
+        :class="{ 'bg-white': display === 'online-catalog' }"
+      >
+        Online Catalog
+      </button>
+      <button @click="display = 'product-page'" :class="{ 'bg-white': display === 'product-page' }">
+        Product Page
+      </button>
     </div>
     <div>
       <div v-if="display === 'consignment-software'" class="project-container">
@@ -63,35 +76,51 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div v-if="display === 'online-catalog'" class="project-container">
-        <h2>Stationary Store Catalogue</h2>
-        <span>
-          <p class="font-semibold italic inline">Stack:</p>
-          NextJs | Typescript | Supabase | Tailwind
-        </span>
-        <span>
-          A full-stack online catalogue for my family's stationary store. Built with customer and
-          admin interfaces, allowing product display, creation and updated. Implemented
-          authentication functionality for admin protected routes.
-        </span>
-        <div>
-          <p class="font-semibold italic">What I learned...</p>
+      <div v-if="display === 'online-catalog'" class="flex flex-col lg:flex-row gap-4">
+        <div class="info">
+          <h2>Stationary Store Catalogue</h2>
+          <span>
+            <p class="font-semibold italic inline">Stack:</p>
+            NextJs | Typescript | Supabase | Tailwind
+          </span>
+          <span>
+            A full-stack online catalogue for my family's stationary store. Built with customer and
+            admin interfaces, allowing product display, creation and updated. Implemented
+            authentication functionality for admin protected routes.
+          </span>
           <div>
-            <font-awesome-icon icon="fa-lightbulb" />
-            <p class="italic inline">Component-driven design.</p>
+            <p class="font-semibold italic">What I learned...</p>
+            <div>
+              <font-awesome-icon icon="fa-lightbulb" />
+              <p class="italic inline">Component-driven design.</p>
+            </div>
+            <div>
+              <font-awesome-icon icon="fa-lightbulb" />
+              <p class="italic inline">End-to-end deployment.</p>
+            </div>
+            <div>
+              <font-awesome-icon icon="fa-lightbulb" />
+              <p class="italic inline">Middleware and authentication.</p>
+            </div>
           </div>
           <div>
-            <font-awesome-icon icon="fa-lightbulb" />
-            <p class="italic inline">End-to-end deployment.</p>
-          </div>
-          <div>
-            <font-awesome-icon icon="fa-lightbulb" />
-            <p class="italic inline">Middleware and authentication.</p>
+            <a class="block" href="https://los-reyess-new.vercel.app/" target="_blank"
+              ><font-awesome-icon icon="fa-link" /> View Live</a
+            >
+            <a href="https://github.com/ashleyosuna/los-reyess-new" target="_blank"
+              ><font-awesome-icon icon="fa-folder-open" /> Source Code</a
+            >
           </div>
         </div>
         <div>
-          <a class="block"><font-awesome-icon icon="fa-link" /> View Live</a>
-          <a><font-awesome-icon icon="fa-folder-open" /> Source Code</a>
+          <div class="image-container left pb-[10px]">
+            <video muted autoplay class="border border-[#eaebed] rounded-md p-2">
+              <source src="/catalog.mp4" controls type="video/mp4" />
+            </video>
+          </div>
+          <div class="image-container right">
+            <img src="/admin-page.png" class="border border-[#eaebed] rounded-md p-2" />
+          </div>
         </div>
       </div>
       <div v-if="display === 'product-page'" class="flex flex-col lg:flex-row gap-4">
@@ -145,9 +174,9 @@ onMounted(() => {
     background-color 0.3s;
 }
 
-.tabs button:focus {
+/* .tabs button:focus {
   background-color: white;
-}
+} */
 
 .project-container {
   display: flex;

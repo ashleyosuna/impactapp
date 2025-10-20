@@ -1,5 +1,5 @@
 <template>
-  <div class="infinite-color-loop h-[600px] p-12">
+  <div class="infinite-color-loop h-[600px] pt-24 p-12">
     <div>
       <h1 class="text-white text-[55px]">Ashley Osuna.</h1>
       <div class="container">
