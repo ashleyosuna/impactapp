@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
+import About from './components/About.vue'
+import Projects from './components/Projects.vue'
+import Skills from './components/Skills.vue'
+import Contact from './components/Contact.vue'
 </script>
 
 <template>
@@ -13,8 +15,11 @@ import Hero from './components/Hero.vue'
   </header>
 
   <main>
-    <!-- <TheWelcome /> -->
     <Hero />
+    <About />
+    <Projects />
+    <Skills />
+    <Contact />
   </main>
 </template>
 
