@@ -14,6 +14,6 @@
         grow among impact.com’s <span class="text-[#298dda] italic">growth technologists</span>.
       </span>
     </div>
-    <div>IMAGE HERE</div>
+    <!-- <div>IMAGE HERE</div> -->
   </section>
 </template>
