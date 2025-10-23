@@ -9,7 +9,7 @@
     <div class="text-center">
       <span @click="scroll('about-me')">About</span>
       <span @click="scroll('projects')">Projects</span>
-      <span @click="scroll('skills')">Skills</span>
+      <!-- <span @click="scroll('skills')">Skills</span> -->
       <span @click="scroll('contact')">Contact</span>
     </div>
   </div>
